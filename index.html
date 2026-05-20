@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adega dos DEV's -- CP3</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <main id="view-login" class="login-card">
+        <header class="login-header">
+            <i class="fa-solid fa-wine-glass wine-icon"></i>
+            <h2>Adega dos DEV's</h2>
+            <p class="subtitle">Acesso do chefe</p>
+        </header>
+
+        <form id="form-login">
+            <div class="input-container">
+                <label for="user">Usuário</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-user field-icon"></i>
+                    <input type="text" id="user" placeholder="Digite seu usuário (ex: user)">
+                </div>
+            </div>
+
+            <div class="input-container">
+                <label for="pass">Senha</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock field-icon"></i>
+                    <input type="password" id="pass" placeholder="Digite sua senha (ex: senha2025)">
+                    <button type="button" class="btn-toggle-password" title="Alternar visibilidade da senha">
+                        <span id="eye-icon"><i class="fa-solid fa-eye"></i></span>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-login">
+                Entrar <i class="fa-solid fa-right-to-bracket login-arrow"></i>
+            </button>
+            
+            <p id="login-error" class="error hidden">Usuário ou senha inválidos.</p>
+        </form>
+    </main>
+
+    <main id="view-app" class="app-container hidden">
+        <header class="app-header">
+            <h1>Minha Adega</h1>
+            <button id="btn-logout" class="btn-outline">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+            </button>
+        </header>
+
+        <section class="controls card">
+            <h2>Gerenciar Bebidas</h2>
+            <div class="input-wrapper">
+                <input type="text" id="drink-input" placeholder="Nome da bebida (Ex: Gin Beefeater Pink)">
+            </div>
+            
+            <p id="crud-error" class="error hidden">O campo da bebida não pode ficar vazio!</p>
+            <p id="crud-success" class="success hidden">Bebida cadastrada com sucesso!</p>
+            
+            <div class="button-group">
+                <button id="btn-add-start" class="btn-outline">Adicionar no Início</button>
+                <button id="btn-add-end" class="btn-primary">Adicionar no Final</button>
+            </div>
+        </section>
+
+        <section class="list-container card">
+            <h2>Bebidas Cadastradas</h2>
+            <ul id="beverage-list">
+                </ul>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
