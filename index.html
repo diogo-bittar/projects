@@ -3,9 +3,12 @@
 <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WL Salão de Beleza e Barbearia - Serviços de qualidade para beleza e barbeiro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="WL Salão de Beleza e Barbearia - Serviços de qualidade para beleza e barbeiro. Barbearia e salão profissional.">
     <meta name="theme-color" content="#1a1a1a">
+    <meta name="color-scheme" content="dark light">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     <!-- Title -->
     <title>WL Salão de Beleza e Barbearia</title>
@@ -16,7 +19,7 @@
 </head>
 <body>
     <!-- HEADER -->
-    <header class="header" role="banner">
+    <header class="header" role="banner" aria-label="Cabeçalho do site">
         <div class="container">
             <div class="logo">
                 <h1>WL</h1>
@@ -25,25 +28,24 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main>
+    <main id="main-content" role="main" aria-label="Conteúdo principal">
         <!-- HERO SECTION -->
-        <section class="hero" id="inicio" role="main">
+        <section class="hero" id="inicio" role="region" aria-labelledby="hero-title">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="titulo-principal">WL Salão de Beleza e Barbearia</h1>
-                    <p class="subtitulo">Escolha o serviço desejado</p>
+                    <h1 class="titulo-principal" id="hero-title">WL Salão de Beleza e Barbearia</h1>
 
                     <!-- SERVICES SELECTION -->
-                    <div class="servicos-container" role="region" aria-label="Seção de Serviços">
-                        <a href="#" class="servico-btn" title="Ir para serviços de Barbearia">
+                    <div class="servicos-container" role="region" aria-label="Seção de Serviços. Escolha entre Barbearia ou Salão">
+                        <a href="#barbearia" class="servico-btn" title="Ir para serviços de Barbearia" aria-label="Barbearia - Cortes, barbas e cuidados masculinos">
                             <div class="servico-icon" aria-hidden="true"><i class="fas fa-scissors"></i></div>
                             <h2>Barbearia</h2>
                             <p>Cortes, barbas e cuidados masculinos</p>
                         </a>
 
-                        <a href="#" class="servico-btn" title="Ir para serviços de Salão">
+                        <a href="#salao" class="servico-btn" title="Ir para serviços de Salão" aria-label="Salão - Cabelo, manicure e cuidados femininos">
                             <div class="servico-icon" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></div>
-                            <h2>Salão</h2>
+                            <h2>Salão de Beleza</h2>
                             <p>Cabelo, manicure e cuidados femininos</p>
                         </a>
                     </div>
@@ -53,7 +55,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer" role="contentinfo" aria-label="Rodapé">
         <p>&copy; 2026 WL Salão de Beleza e Barbearia. Todos os direitos reservados.</p>
         <p class="footer-credit">Desenvolvido por <strong>BACKDORES</strong></p>
     </footer>

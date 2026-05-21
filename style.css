@@ -1,4 +1,35 @@
 /* ========================================
+   ACCESSIBILITY: PREFERS REDUCED MOTION
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY: HIGH CONTRAST MODE
+   ======================================== */
+@media (prefers-contrast: more) {
+    .servico-btn:hover {
+        outline: 3px solid var(--cor-dourada);
+    }
+}
+
+/* ========================================
+   MINIMUM TOUCH TARGET SIZE (WCAG 2.1 AAA)
+   ======================================== */
+.servico-btn {
+    min-height: 48px;
+    min-width: 48px;
+}
+
+/* ========================================
    GOOGLE FONTS IMPORTS
    ======================================== */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
@@ -93,11 +124,18 @@ a {
 }
 
 .logo h1 {
-    font-family: var(--font-accent);
+    font-family: var(--font-secondary);
     color: var(--cor-dourada);
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 6px;
+    text-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.logo h1:hover {
+    text-shadow: 0 2px 12px rgba(212, 175, 55, 0.4);
+    letter-spacing: 8px;
 }
 
 /* ========================================
@@ -156,13 +194,22 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    min-height: 48px;
+    min-width: 48px;
 }
 
-.servico-btn:hover {
+.servico-btn:hover,
+.servico-btn:focus-visible {
     background-color: var(--cor-cinza);
-    border-color: var(--cor-verde);
+    border-color: var(--cor-branco);
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+    outline: none;
+}
+
+.servico-btn:focus-visible {
+    outline: 3px solid var(--cor-dourada);
+    outline-offset: 2px;
 }
 
 .servico-icon {
@@ -172,7 +219,8 @@ a {
 }
 
 .servico-btn:hover .servico-icon {
-    color: var(--cor-verde);
+    color: var(--cor-branco);
+    transform: scale(1.15);
 }
 
 .servico-btn h2 {
