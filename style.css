@@ -1,0 +1,330 @@
+/* ========================================
+   GOOGLE FONTS IMPORTS
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* ========================================
+   CSS VARIABLES - DESIGN TOKENS
+   ======================================== */
+:root {
+    /* Colors */
+    --cor-dourada: #D4AF37;
+    --cor-verde: #FAFAFA;
+    --cor-preto: #0f0f0f;
+    --cor-cinza-escuro: #1a1a1a;
+    --cor-cinza: #2a2a2a;
+    --cor-branco: #FAFAFA;
+
+    /* Typography */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+    --font-accent: 'Bebas Neue', cursive;
+
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 50px;
+
+    /* Transitions */
+    --transition: all 0.3s ease;
+    --transition-slow: all 0.6s ease-out;
+}
+
+/* ========================================
+   GLOBAL STYLES & RESET
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* ========================================
+   LAYOUT - CONTAINER
+   ======================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+    background-color: var(--cor-cinza-escuro);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: var(--font-accent);
+    color: var(--cor-dourada);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+    background: linear-gradient(135deg, var(--cor-cinza-escuro), var(--cor-cinza));
+    padding: 150px 0;
+    text-align: center;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.titulo-principal {
+    font-family: var(--font-secondary);
+    font-size: 56px;
+    color: var(--cor-dourada);
+    margin-bottom: 15px;
+    animation: slideInDown 0.8s ease-out;
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: var(--cor-branco);
+    margin-bottom: 60px;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* ========================================
+   SERVICES SECTION
+   ======================================== */
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.servico-btn {
+    background-color: var(--cor-cinza-escuro);
+    border: 2px solid var(--cor-dourada);
+    padding: 50px 30px;
+    border-radius: 12px;
+    color: var(--cor-branco);
+    transition: var(--transition);
+    cursor: pointer;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.servico-btn:hover {
+    background-color: var(--cor-cinza);
+    border-color: var(--cor-verde);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+}
+
+.servico-icon {
+    font-size: 60px;
+    animation: bounce 2s ease-in-out infinite;
+    color: var(--cor-dourada);
+}
+
+.servico-btn:hover .servico-icon {
+    color: var(--cor-verde);
+}
+
+.servico-btn h2 {
+    font-family: var(--font-secondary);
+    font-size: 32px;
+    color: var(--cor-dourada);
+    margin-bottom: 10px;
+}
+
+.servico-btn p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background-color: var(--cor-cinza-escuro);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--cor-dourada);
+}
+
+.footer p {
+    color: #999;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-credit {
+    color: var(--cor-dourada);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.footer-credit strong {
+    color: var(--cor-branco);
+    font-weight: 600;
+    font-family: var(--font-primary);
+    font-size: 14px;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLET
+   ======================================== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0;
+    }
+
+    .titulo-principal {
+        font-size: 36px;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .servicos-container {
+        gap: 25px;
+    }
+
+    .servico-btn {
+        padding: 40px 20px;
+    }
+
+    .servico-btn h2 {
+        font-size: 24px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 0;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .titulo-principal {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .servico-btn {
+        padding: 30px 20px;
+    }
+
+    .servico-icon {
+        font-size: 48px;
+    }
+
+    .servico-btn h2 {
+        font-size: 20px;
+    }
+
+    .servico-btn p {
+        font-size: 14px;
+    }
+}
