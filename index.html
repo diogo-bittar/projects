@@ -18,35 +18,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKu8zQwABS8DfwoQiyzIUSEjD6lOnCPZApt1mP2DJqzF1tfy9PczickWQO1toQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header" role="banner" aria-label="Cabeçalho do site">
+    <!-- CABEÇALHO SIMPLES -->
+    <header class="cabecalho" role="banner" aria-label="Cabeçalho do site">
         <div class="container">
             <div class="logo">
                 <h1>WL</h1>
             </div>
+            <button class="botao-tema" id="botao-tema" aria-label="Alternar entre modo escuro e claro" title="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main id="main-content" role="main" aria-label="Conteúdo principal">
-        <!-- HERO SECTION -->
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal" role="main" aria-label="Conteúdo principal">
+        <!-- SEÇÃO DE ABERTURA -->
         <section class="hero" id="inicio" role="region" aria-labelledby="hero-title">
             <div class="container">
-                <div class="hero-content">
-                    <h1 class="titulo-principal" id="hero-title">WL Salão de Beleza e Barbearia</h1>
-
-                    <!-- SERVICES SELECTION -->
-                    <div class="servicos-container" role="region" aria-label="Seção de Serviços. Escolha entre Barbearia ou Salão">
-                        <a href="#barbearia" class="servico-btn" title="Ir para serviços de Barbearia" aria-label="Barbearia - Cortes, barbas e cuidados masculinos">
-                            <div class="servico-icon" aria-hidden="true"><i class="fas fa-scissors"></i></div>
+                <div class="hero-area">
+                    <h1 class="titulo" id="hero-title">WL Salão de Beleza e Barbearia</h1>
+                    <!-- BLOCO DE SERVIÇOS -->
+                    <div class="servicos" role="region" aria-label="Seção de serviços do salão">
+                        <a href="./barbearia.html" class="servico" title="Ir para Barbearia" aria-label="Barbearia - Cortes e barba">
+                            <div class="icone" aria-hidden="true"><i class="fas fa-scissors"></i></div>
                             <h2>Barbearia</h2>
                             <p>Cortes, barbas e cuidados masculinos</p>
                         </a>
 
-                        <a href="#salao" class="servico-btn" title="Ir para serviços de Salão" aria-label="Salão - Cabelo, manicure e cuidados femininos">
-                            <div class="servico-icon" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></div>
-                            <h2>Salão de Beleza</h2>
-                            <p>Cabelo, manicure e cuidados femininos</p>
+                        <a href="./salao.html" class="servico" title="Ir para Salão" aria-label="Salão - Cabelo e manicure">
+                            <div class="icone" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></div>
+                            <h2>Salão</h2>
+                            <p>Cabelo, manicure e tratamentos de beleza</p>
                         </a>
                     </div>
                 </div>
@@ -54,10 +56,13 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- RODAPÉ -->
     <footer class="footer" role="contentinfo" aria-label="Rodapé">
         <p>&copy; 2026 WL Salão de Beleza e Barbearia. Todos os direitos reservados.</p>
-        <p class="footer-credit">Desenvolvido por <strong>BACKDORES</strong></p>
+        <p class="creditos">Desenvolvido por <strong>BACKDORES</strong></p>
     </footer>
+    
+    <!-- Scripts -->
+    <script src="./script.js"></script>
 </body>
 </html>

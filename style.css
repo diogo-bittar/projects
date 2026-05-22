@@ -16,7 +16,7 @@
    ACCESSIBILITY: HIGH CONTRAST MODE
    ======================================== */
 @media (prefers-contrast: more) {
-    .servico-btn:hover {
+    .servico:hover {
         outline: 3px solid var(--cor-dourada);
     }
 }
@@ -24,7 +24,7 @@
 /* ========================================
    MINIMUM TOUCH TARGET SIZE (WCAG 2.1 AAA)
    ======================================== */
-.servico-btn {
+.servico {
     min-height: 48px;
     min-width: 48px;
 }
@@ -109,7 +109,7 @@ a {
 /* ========================================
    HEADER
    ======================================== */
-.header {
+.cabecalho {
     background-color: var(--cor-cinza-escuro);
     padding: 15px 0;
     position: sticky;
@@ -117,7 +117,7 @@ a {
     z-index: 100;
 }
 
-.header .container {
+.cabecalho .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,11 +151,11 @@ a {
     justify-content: center;
 }
 
-.hero-content {
+.hero-area {
     width: 100%;
 }
 
-.titulo-principal {
+.titulo {
     font-family: var(--font-secondary);
     font-size: 56px;
     color: var(--cor-dourada);
@@ -173,7 +173,7 @@ a {
 /* ========================================
    SERVICES SECTION
    ======================================== */
-.servicos-container {
+.servicos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
@@ -181,7 +181,7 @@ a {
     margin: 0 auto;
 }
 
-.servico-btn {
+.servico {
     background-color: var(--cor-cinza-escuro);
     border: 2px solid var(--cor-dourada);
     padding: 50px 30px;
@@ -198,8 +198,8 @@ a {
     min-width: 48px;
 }
 
-.servico-btn:hover,
-.servico-btn:focus-visible {
+.servico:hover,
+.servico:focus-visible {
     background-color: var(--cor-cinza);
     border-color: var(--cor-branco);
     transform: translateY(-10px);
@@ -207,30 +207,30 @@ a {
     outline: none;
 }
 
-.servico-btn:focus-visible {
+.servico:focus-visible {
     outline: 3px solid var(--cor-dourada);
     outline-offset: 2px;
 }
 
-.servico-icon {
+.icone {
     font-size: 60px;
     animation: bounce 2s ease-in-out infinite;
     color: var(--cor-dourada);
 }
 
-.servico-btn:hover .servico-icon {
+.servico:hover .icone {
     color: var(--cor-branco);
     transform: scale(1.15);
 }
 
-.servico-btn h2 {
+.servico h2 {
     font-family: var(--font-secondary);
     font-size: 32px;
     color: var(--cor-dourada);
     margin-bottom: 10px;
 }
 
-.servico-btn p {
+.servico p {
     font-size: 16px;
     color: #ccc;
 }
@@ -251,13 +251,13 @@ a {
     margin: 5px 0;
 }
 
-.footer-credit {
+.creditos {
     color: var(--cor-dourada);
     font-size: 13px;
     margin-top: 8px;
 }
 
-.footer-credit strong {
+.creditos strong {
     color: var(--cor-branco);
     font-weight: 600;
     font-family: var(--font-primary);
@@ -306,7 +306,7 @@ a {
         padding: 100px 0;
     }
 
-    .titulo-principal {
+    .titulo {
         font-size: 36px;
     }
 
@@ -315,15 +315,15 @@ a {
         margin-bottom: 40px;
     }
 
-    .servicos-container {
+    .servicos {
         gap: 25px;
     }
 
-    .servico-btn {
+    .servico {
         padding: 40px 20px;
     }
 
-    .servico-btn h2 {
+    .servico h2 {
         font-size: 24px;
     }
 }
@@ -332,7 +332,7 @@ a {
    RESPONSIVE DESIGN - MOBILE
    ======================================== */
 @media (max-width: 480px) {
-    .header {
+    .cabecalho {
         padding: 10px 0;
     }
 
@@ -345,7 +345,7 @@ a {
         min-height: auto;
     }
 
-    .titulo-principal {
+    .titulo {
         font-size: 28px;
         margin-bottom: 10px;
     }
@@ -355,24 +355,24 @@ a {
         margin-bottom: 30px;
     }
 
-    .servicos-container {
+    .servicos {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .servico-btn {
+    .servico {
         padding: 30px 20px;
     }
 
-    .servico-icon {
+    .icone {
         font-size: 48px;
     }
 
-    .servico-btn h2 {
+    .servico h2 {
         font-size: 20px;
     }
 
-    .servico-btn p {
+    .servico p {
         font-size: 14px;
     }
 }

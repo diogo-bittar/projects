@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Barbearia WL - Cortes, barba e estilo masculino.">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>Barbearia - WL Salão</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKu8zQwABS8DfwoQiyzIUSEjD6lOnCPZApt1mP2DJqzF1tfy9PczickWQO1toQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header class="cabecalho" role="banner" aria-label="Cabeçalho do site">
+        <div class="container">
+            <div class="logo"><h1>WL</h1></div>
+            <button class="botao-tema" id="botao-tema" aria-label="Alternar entre modo escuro e claro" title="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main id="conteudo-principal" role="main" aria-label="Conteúdo principal da barbearia">
+        <section class="hero" role="region" aria-labelledby="barbearia-title">
+            <div class="container">
+                <div class="hero-area">
+                    <h1 class="titulo" id="barbearia-title">Barbearia WL</h1>
+                    <p class="subtitulo">Cortes, barbas e atendimento premium para você.</p>
+
+                    <div class="servicos" role="region" aria-label="Serviços da barbearia">
+                        <div class="servico">
+                            <div class="icone" aria-hidden="true"><i class="fas fa-cut"></i></div>
+                            <h2>Corte Masculino</h2>
+                            <p>Modelagem personalizada e acabamento profissional.</p>
+                        </div>
+                        <div class="servico">
+                            <div class="icone" aria-hidden="true"><i class="fas fa-beard"></i></div>
+                            <h2>Barba</h2>
+                            <p>Acabamento perfeito com navalha e cuidados com a pele.</p>
+                        </div>
+                    </div>
+
+                    <a href="./index.html" class="servico" title="Voltar para a página inicial" aria-label="Voltar para página inicial">
+                        <div class="icone" aria-hidden="true"><i class="fas fa-arrow-left"></i></div>
+                        <h2>Voltar</h2>
+                        <p>Retornar para o site principal.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo" aria-label="Rodapé">
+        <p>&copy; 2026 WL Salão de Beleza e Barbearia.</p>
+        <p class="creditos">Desenvolvido por <strong>BACKDORES</strong></p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

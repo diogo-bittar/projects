@@ -1,33 +1,20 @@
-// Selecionar os botões do seletor
-const selectorBtns = document.querySelectorAll('.selector-btn');
+// Botão para alternar tema claro/escuro
+const botaoTema = document.getElementById('botao-tema');
+const html = document.documentElement;
 
-// Selecionar as seções de serviços
-const barbeariaSection = document.querySelector('.barbearia-section');
-const salaoSection = document.querySelector('.salao-section');
+// Função simples para alterar o tema e manter o ícone atualizado
+function alternarTema() {
+    const temEscuro = html.classList.contains('dark');
 
-// Adicionar evento de clique para cada botão
-selectorBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-        // Remover a classe active de todos os botões
-        selectorBtns.forEach(b => b.classList.remove('active'));
+    if (temEscuro) {
+        html.classList.remove('dark');
+        botaoTema.innerHTML = '<i class="fas fa-sun"></i>';
+        botaoTema.setAttribute('aria-label', 'Ativar modo escuro');
+    } else {
+        html.classList.add('dark');
+        botaoTema.innerHTML = '<i class="fas fa-moon"></i>';
+        botaoTema.setAttribute('aria-label', 'Ativar modo claro');
+    }
+}
 
-        // Adicionar a classe active ao botão clicado
-        this.classList.add('active');
-
-        // Pegar o tipo de serviço
-        const serviceType = this.getAttribute('data-type');
-
-        // Mostrar/Esconder seções conforme o tipo
-        if (serviceType === 'barbearia') {
-            barbeariaSection.classList.remove('hidden');
-            salaoSection.classList.add('hidden');
-            document.querySelector('.hero-title').textContent = 'Bem-vindo à WL Barbearia';
-            document.querySelector('.hero-description').textContent = 'Cortes de qualidade, profissionais experientes e atendimento premium';
-        } else if (serviceType === 'salao') {
-            barbeariaSection.classList.add('hidden');
-            salaoSection.classList.remove('hidden');
-            document.querySelector('.hero-title').textContent = 'Bem-vindo ao WL Salão';
-            document.querySelector('.hero-description').textContent = 'Beleza, tratamentos e cuidados com cabelo de primeira qualidade';
-        }
-    });
-});
+botaoTema.addEventListener('click', alternarTema);
